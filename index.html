@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secret</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <audio id="birthday-audio" loop>
+      <source src="happy_birthday.mp3" type="audio/mpeg">
+    </audio>
+
+  <div class="balloon-container">
+    <div class="balloon red"></div>
+    <div class="balloon blue"></div>
+    <div class="balloon green"></div>
+    <div class="balloon yellow"></div>
+  </div>
+
+  <div id="intro-screen" class="fullscreen center fade">
+    <h1>HELLOOOOO! </h1>
+    <p1 style="font-size: 1.5em;">I HAVE A SURPRISE FOR YOUU</p1>
+    <p2 style="font-size: 1.5em;">GUESS WHAT IS ITTT!!!</p2>
+    <button onclick="askReady()">just click thiss ;)) </button>
+  </div>
+
+  <div id="ready-screen" class="fullscreen center hidden fade">
+    <h1>Are you ready for my surprise? 🎁</h1>
+    <p style="font-size: 1.5em;">my answer is....</p>
+    <div class="buttons">
+      <button onclick="showCakeScreen()">yesss</button>
+      <button onclick="notReady()">no :(</button>
+    </div>
+  </div>
+
+  <div id="naughty-screen" class="fullscreen center hidden fade">
+    <h1>Pumayag ba ako na hindi ka readyy?!!😤</h1>
+    <button onclick="askReady()">return na</button>
+    <p style="font-size: 1.2em;">bawal ka na humindi</p>
+  </div>
+
+  <div id="cake-screen" class="card hidden fade">
+    <h1>Happy, Happy Birthday, *Name*!!!🎉</h1>
+    <img src="cake.gif" alt="Birthday Cake" class="cake" />
+    <p>kunwari kinakanta q sau yung sound</p>
+    <button onclick="showFinalGift()">Open my gift for you🎁</button>
+  </div>
+
+  <div id="gift-screen" class="card hidden">
+    <h1>Here's gift for ya!</h1>
+    <p>✨ You light up the world just by being in it! ✨</p>
+    <img src="gift.gif" class="gift" alt="Surprise GIF">
+    <p id="typing-message"></p>
+    <img src="cat_kiss.gif" class="cat" id="cat-gif" alt="Cat kissing">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
